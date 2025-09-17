@@ -7,8 +7,9 @@
 
   <!-- Bootstrap CSS with Replit theme -->
   <link href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css" rel="stylesheet" />
-  <!-- Custom CSS (note the ../ because index.html is in templates/) -->
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
+  <!-- Custom JavaScript -->
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -28,7 +29,7 @@
       </div>
     </div>
 
-    <!-- Flash messages placeholder (client-side only now) -->
+    <!-- Flash messages placeholder -->
     <div class="container" id="flash-container" aria-live="polite"></div>
 
     <!-- Game Area -->
@@ -42,22 +43,14 @@
               <h3 class="mb-0">🎲 Spin the Reels!</h3>
             </div>
             <div class="card-body">
-              <!-- script.js should render a 3x3 (or desired) grid inside this element -->
               <div id="slot-grid" class="slot-grid mx-auto">
-                <!-- Optional: static placeholders until JS populates -->
-                <!--
-                <div class="slot-cell"><span class="symbol">🍒</span></div>
-                <div class="slot-cell"><span class="symbol">🍋</span></div>
-                <div class="slot-cell"><span class="symbol">🍇</span></div>
-                ...
-                -->
+                <!-- JS will populate -->
               </div>
             </div>
           </div>
 
           <!-- Game Controls -->
           <div class="text-center">
-            <!-- No server POST; just buttons JS can handle -->
             <button type="button" id="spin-btn" class="btn btn-primary btn-lg me-2">
               🎰 SPIN (-10 credits)
             </button>
@@ -96,8 +89,6 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Custom JavaScript (note the ../ because index.html is in templates/) -->
-  <script src="../static/script.js" defer></script>
 
   <!-- Optional: noscript message -->
   <noscript>
@@ -107,3 +98,4 @@
   </noscript>
 </body>
 </html>
+
