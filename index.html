@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎰 Slot Machine</title>
+
+  <!-- Bootstrap CSS with Replit theme -->
+  <link href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css" rel="stylesheet" />
+  <!-- Custom CSS (note the ../ because index.html is in templates/) -->
+  <link rel="stylesheet" href="../static/style.css" />
+</head>
+<body>
+  <div class="container-fluid min-vh-100 d-flex flex-column">
+    <!-- Header -->
+    <div class="container text-center py-4">
+      <h1 class="display-4 mb-3">🎰 Slot Machine</h1>
+      <div class="row justify-content-center">
+        <div class="col-auto">
+          <div class="card">
+            <div class="card-body">
+              <!-- Start at 100; script.js should update this -->
+              <h2 class="card-title mb-0">💰 Credits: <span id="credits-display">100</span></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flash messages placeholder (client-side only now) -->
+    <div class="container" id="flash-container" aria-live="polite"></div>
+
+    <!-- Game Area -->
+    <div class="container flex-grow-1 d-flex flex-column justify-content-center">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+
+          <!-- Slot Machine Grid -->
+          <div class="card mb-4">
+            <div class="card-header text-center">
+              <h3 class="mb-0">🎲 Spin the Reels!</h3>
+            </div>
+            <div class="card-body">
+              <!-- script.js should render a 3x3 (or desired) grid inside this element -->
+              <div id="slot-grid" class="slot-grid mx-auto">
+                <!-- Optional: static placeholders until JS populates -->
+                <!--
+                <div class="slot-cell"><span class="symbol">🍒</span></div>
+                <div class="slot-cell"><span class="symbol">🍋</span></div>
+                <div class="slot-cell"><span class="symbol">🍇</span></div>
+                ...
+                -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Game Controls -->
+          <div class="text-center">
+            <!-- No server POST; just buttons JS can handle -->
+            <button type="button" id="spin-btn" class="btn btn-primary btn-lg me-2">
+              🎰 SPIN (-10 credits)
+            </button>
+
+            <button type="button" id="reset-btn" class="btn btn-secondary btn-lg">
+              🔄 Reset Game
+            </button>
+          </div>
+
+          <!-- Game Rules -->
+          <div class="card mt-4">
+            <div class="card-header">
+              <h5 class="mb-0">📋 How to Play</h5>
+            </div>
+            <div class="card-body">
+              <ul class="mb-0">
+                <li><strong>Starting Credits:</strong> 100</li>
+                <li><strong>Spin Cost:</strong> 10 credits</li>
+                <li><strong>Single 3-in-a-row:</strong> +50 credits</li>
+                <li><strong>Multiple 3-in-a-rows:</strong> +100 credits</li>
+                <li><strong>Symbols:</strong> 🍒 🍋 🍇 🔔 ⭐ 💎 7️⃣</li>
+                <li><strong>Win Directions:</strong> Horizontal, Vertical, or Diagonal</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="container text-center py-3">
+      <small class="text-muted">Good luck and have fun! 🍀</small>
+    </footer>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JavaScript (note the ../ because index.html is in templates/) -->
+  <script src="../static/script.js" defer></script>
+
+  <!-- Optional: noscript message -->
+  <noscript>
+    <div class="container mt-3">
+      <div class="alert alert-warning">This app requires JavaScript to run.</div>
+    </div>
+  </noscript>
+</body>
+</html>
